@@ -6,9 +6,6 @@ $backgrounds = d.querySelectorAll('.fondo'),
 $sign = d.querySelector('.container-sign'),
 $btnSign = d.querySelector('.sign-btn');
 
-console.log($sign)
-console.log($btnSign)
-
 let firstClick = false;
 let firstCard, secondCard;
 let animationBlocked = false;
@@ -128,4 +125,11 @@ setInterval(()=>{
 }, 5000);
 
 initializeCards();
+
+window.addEventListener('load', () => {
+    console.log('termino de cargar');
+    const $loadingScreen = document.getElementById('loading-screen');
+    $loadingScreen.style.visibility = 'hidden';
+    $loadingScreen.style.opacity = '0';
+});
 
